@@ -1,0 +1,76 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"nameFilm","type":"string"},
+				{"name":"createYear","type":"uint256"},
+				{"name":"genre","type":"string"},
+				{"name":"durationMinutes","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenOwner",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTokenInfo",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"tokenName","type":"string"},
+				{"name":"tokenYear","type":"uint256"},
+				{"name":"tokenGenre","type":"string"},
+				{"name":"tokenDuration","type":"uint256"}
+			]
+		},
+		{
+			"name": "putTokenSale",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"},
+				{"name":"tokenPrice","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTokenPrice",
+			"inputs": [
+				{"name":"tokenID","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"nameFilm","type":"string"},{"name":"createYear","type":"uint256"},{"name":"genre","type":"string"},{"name":"durationMinutes","type":"uint256"}],"name":"tokenArr","type":"tuple[]"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"},
+		{"name":"tokenToPrice","type":"map(uint256,uint256)"}
+	]
+}
